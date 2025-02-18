@@ -1,0 +1,31 @@
+<section class="cmt-hero-banner" style="background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url({{ module.background_image.src }})">
+  <div class="cmt-wrapper">
+    <div class="cmt-hero-banner-text">
+      <h1>
+        {{ module.heading }}
+      </h1>
+    </div>
+    <button class="cmt-hero-banner-button button cmt-primary-button-transparent">
+
+      {% set href = module.button.link_field.url.href %}
+      {% if module.button.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a
+         {% if module.button.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+         href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+         {% else %}
+         href="{{ href|escape_url }}"
+         {% endif %}
+         {% if module.button.link_field.open_in_new_tab %}
+         target="_blank"
+         {% endif %}
+         {% if module.button.link_field.rel %}
+         rel="{{ module.button.link_field.rel|escape_attr }}"
+         {% endif %}
+         >
+        {{ module.button.text_field }}
+      </a>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,460 @@
+/* Theme base styles */
+
+/* Tools
+Any animations, or functions used throughout the project.
+Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
+*/
+
+/* Generic
+This is where reset, normalize & box-sizing styles go.
+*/
+
+{% include './generic/_reset.css' %}
+{% include './generic/_normalize.css' %}
+
+/* Objects
+Non-cosmetic design patterns including grid and layout classes)
+*/
+
+{% include './objects/_layout.css' %}
+{% include './objects/_containers-dnd.css' %}
+
+/* Elements
+Base HMTL elements are styled in this section (<body>, <h1>, <a>, <p>, <button> etc.)
+*/
+
+{% include './elements/_typography.css' %}
+{% include './elements/_buttons.css' %}
+{% include './elements/_forms.css' %}
+{% include './elements/_tables.css' %}
+
+/* Components
+Specific pieces of UI that are stylized. Typically used for global partial styling
+*/
+
+{% include './components/_header.css' %}
+{% include './components/_default-modules.css' %}
+
+/* Utilities
+Helper classes with ability to override anything that comes before it
+*/
+
+{% include './utilities/_helper.css' %}
+
+
+:root {
+  --blue: #1e90ff;
+  --white: #fff;
+  --dark-blue: #17135c;
+  --hover-blue: #3a30ab;
+  --bright-blue: #005dcb;
+  --bright-purple: #7387ef;
+  --dark-grey: #e2e2e2;
+  --light-grey: #f1f2f2;
+  --dark-gray: #8c9196;
+  --light-gray: rgba(23, 19, 92, .4);
+  --light-transparent: rgba(0, 0, 0, .2);
+  --transparent-white: hsla(0, 0%, 100%, .5);
+}
+
+
+.blog-related-posts__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px
+}
+
+.blog-index__post {
+  margin: 0 10px
+}
+
+.blog-index__post-image {
+  height: 270px;
+  object-fit: cover;
+  width: 100%
+}
+
+.blog-index__post-title,.blog-index__post-title-link,.blog-index__post-title-link:focus,.blog-index__post-title-link:hover {
+  color: #000;
+  font-size: 22px;
+  text-decoration: none
+}
+
+.blog-index__post-meta {
+  margin: 1rem 0
+}
+
+.blog-index__post-button-wrapper,.blog-index__post-tags {
+  display: inline-block
+}
+
+.blog-index__heading {
+  padding-bottom: 0
+}
+
+@media (min-width: 1024px) {
+  .blog-index__post {
+    flex:0 0 calc(33.33333% - 20px);
+    margin: 0 10px
+  }
+
+  .blog-index-wrapper {
+    padding: 30px 100px 100px
+  }
+}
+
+@media (max-width: 1023px) {
+  .blog-index__post {
+    flex:0 0 calc(50% - 20px)
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-index-wrapper {
+    flex-direction:column
+  }
+}
+
+.cmt-primary-button-light,.cmt-primary-button-primary,.cmt-primary-button-secondary,.cmt-primary-button-transparent {
+  border-radius: 8px;
+  font: 800 18px/120% Roboto;
+  height: 60px;
+  min-width: 190px;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: all .1s ease;
+  width: fit-content
+}
+
+.cmt-primary-button-primary {
+  background-color: #17135c;
+  border: none
+}
+
+.cmt-primary-button-primary a {
+  color: #fff;
+  text-decoration: none
+}
+
+.cmt-primary-button-primary:hover {
+  background-color: #3574e3
+}
+
+.cmt-primary-button-primary a:hover,.cmt-primary-button-primary:hover a {
+  color: #fff
+}
+
+.cmt-primary-button-primary:focus {
+  background-color: #3574e3;
+  border: 3px solid #3574e3
+}
+
+.cmt-primary-button-primary:disabled {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey)
+}
+
+.cmt-primary-button-primary:disabled a {
+  color: var(--dark-gray)!important
+}
+
+.cmt-primary-button-secondary {
+  background-color: #3574e3;
+  border: none
+}
+
+.cmt-primary-button-secondary a {
+  color: #fff;
+  text-decoration: none
+}
+
+.cmt-primary-button-secondary:hover {
+  background-color: #17135c
+}
+
+.cmt-primary-button-secondary a:hover,.cmt-primary-button-secondary:hover a {
+  color: #fff
+}
+
+.cmt-primary-button-secondary:focus {
+  background-color: #17135c;
+  border: 3px solid #17135c
+}
+
+.cmt-primary-button-secondary:disabled {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey)
+}
+
+.cmt-primary-button-secondary:disabled a {
+  color: var(--dark-gray)!important
+}
+
+.cmt-primary-button-light {
+  background-color: var(--light-grey);
+  border: 2px solid #17135c
+}
+
+.cmt-primary-button-light a {
+  color: #17135c;
+  text-decoration: none
+}
+
+.cmt-primary-button-light:hover {
+  border: 3px solid #3574e3
+}
+
+.cmt-primary-button-light a:hover,.cmt-primary-button-light:hover a {
+  color: #3574e3
+}
+
+.cmt-primary-button-light:focus {
+  border: 3px solid #3574e3
+}
+
+.cmt-primary-button-light:disabled {
+  border: 2px solid var(--light-grey)
+}
+
+.cmt-primary-button-light:disabled a {
+  color: var(--dark-gray)!important
+}
+
+.cmt-primary-button-transparent {
+  background-color: transparent;
+  border: 2px solid #fff
+}
+
+.cmt-primary-button-transparent a {
+  color: #fff;
+  text-decoration: none
+}
+
+.cmt-primary-button-transparent:hover {
+  border: 3px solid #fff
+}
+
+.cmt-primary-button-transparent a:hover,.cmt-primary-button-transparent:hover a {
+  color: #fff
+}
+
+.cmt-primary-button-transparent:focus {
+  border: 3px solid #fff
+}
+
+.cmt-primary-button-transparent:disabled {
+  border: 2px solid var(--light-grey)
+}
+
+.cmt-primary-button-transparent:disabled a {
+  color: var(--dark-gray)!important
+}
+
+.cmt-underline-button,.cmt-underline-button-blue,.cmt-underline-button-white {
+  background-color: transparent;
+  border: none;
+  font: 800 18px/120% Roboto;
+  margin-left: -1rem;
+  padding: 1rem 1rem 1.5rem;
+  text-align: center;
+  transition: all .1s ease;
+  width: fit-content
+}
+
+.cmt-underline-button {
+  color: #17135c
+}
+
+.cmt-underline-button a {
+  border-bottom: 2px solid #17135c;
+  padding: 5px 0
+}
+
+.cmt-underline-button:hover a {
+  border-bottom: 3px solid #17135c
+}
+
+.cmt-underline-button:focus {
+  border: 2px solid var(--bright-blue);
+  border-radius: 8px
+}
+
+.cmt-underline-button:disabled {
+  color: #17135c
+}
+
+.cmt-underline-button:disabled a {
+  border-bottom: 2px solid #17135c
+}
+
+.cmt-underline-button-blue {
+  color: var(--bright-blue)!important
+}
+
+.cmt-underline-button-blue a,.cmt-underline-button-blue a:hover {
+  border-bottom: 2px solid var(--bright-blue) !important;
+  color: var(--bright-blue) !important;
+  padding: 5px 0;
+  border: none;
+  border-radius: 0;
+}
+
+.cmt-underline-button-blue:hover a {
+  border-bottom: 3px solid var(--bright-blue);
+  font-weight:700;
+}
+
+.cmt-underline-button-blue a:hover {
+  text-decoration: none
+}
+
+.cmt-underline-button-blue:focus {
+  border: 2px solid var(--bright-blue);
+  border-radius: 8px
+}
+button.cmt-underline-button-blue{
+  border: none !important;
+  font-weight: 700;
+}
+.cmt-underline-button-blue:disabled {
+  color: var(--bright-blue)!important
+}
+
+.cmt-underline-button-blue:disabled a {
+  border-bottom: 2px solid var(--bright-blue)
+}
+
+.cmt-underline-button-white {
+  color: var(--white)
+}
+
+.cmt-underline-button-white a,.cmt-underline-button-white a:hover {
+  border-bottom: 2px solid var(--white);
+  color: var(--white)!important;
+  padding: 5px 0
+}
+
+.cmt-underline-button-white a:hover {
+  text-decoration: none
+}
+
+.cmt-underline-button-white:hover a {
+  border-bottom: 3px solid var(--white)
+}
+
+.cmt-underline-button-white:focus {
+  border: 2px solid var(--white);
+  border-radius: 8px
+}
+
+.cmt-underline-button-white:disabled {
+  color: var(--white) 80!important
+}
+
+.cmt-underline-button-white:disabled a {
+  border-bottom: 80 solid var(--white)
+}
+
+.cmt-button-left,.cmt-button-right {
+  background: transparent;
+  border: 1.5px solid #17135c;
+  border-radius: 8px;
+  color: #17135c;
+  font-size: 24px;
+  height: 60px;
+  width: 60px
+}
+
+.cmt-button-left:hover,.cmt-button-right:hover {
+  border: 1.5px solid var(--bright-blue);
+  color: var(--bright-blue)!important
+}
+
+.cmt-button-left--white,.cmt-button-right--white {
+  background: transparent;
+  border: 1.5px solid var(--white);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 24px;
+  height: 60px;
+  width: 60px
+}
+
+.cmt-button-left--white:hover,.cmt-button-right--white:hover {
+  border: 1.5px solid var(--white);
+  color: var(--white)
+}
+.content-wrapper {
+  max-width: 1540px;
+  padding: 0 100px;
+}
+.cmt-button-term {
+  background: transparent;
+  border: 1px solid #17135c;
+  border-radius: 8px;
+  color: #17135c;
+  height: 35px;
+  min-width: 170px;
+  padding:unset !important;
+}
+
+.cmt-button-term a,.cmt-button-term a:hover {
+  color: #17135c
+}
+
+.cmt-button-term:hover {
+  border: 1px solid var(--hover-blue);
+}
+
+.cmt-button-term a:hover {
+  text-decoration: none
+}
+
+.cmt-button-term:hover a {
+  color: var(--hover-blue)!important
+}
+
+.cmt-button-term:focus {
+  border: 2px solid #17135c
+}
+
+.cmt-button-term:focus a {
+  color: #17135c!important
+}
+
+.cmt-button-term:disabled {
+  border: 2px solid var(--light-gray)
+}
+
+.cmt-button-term:disabled a {
+  color: var(--light-gray)!important
+}
+
+.cmt-button-term-white {
+  background: transparent;
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  color: var(--white);
+  height: 35px;
+  min-width: 170px
+}
+
+.cmt-button-term-white:focus,.cmt-button-term-white:hover {
+  border: 2px solid var(--white)
+}
+
+.cmt-button-term-white:disabled {
+  border: 2px solid var(--transparent-white)
+}
+
+.cmt-button-term-white:disabled a {
+  color: var(--transparent-white)!important
+}
+
+.cmt-button-term a,.cmt-button-term-white a {
+  text-decoration: none!important
+}
+
+.cmt-button-term,.cmt-button-term-white {
+  font: 400 14px/120% Roboto
+}

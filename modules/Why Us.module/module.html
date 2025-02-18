@@ -1,0 +1,30 @@
+<div class="cmt-features-grid__container cmt-wrapper">
+  <h2 class="cmt-features-grid__item__heading">{{ module.section_heading }}</h2>
+  <div class="cmt-features-grid__item__description">
+    {{ module.section_description }}
+  </div>
+  <div class="cmt-features-grid__items">
+    {% for item in module.card %}
+    <div class="cmt-features-grid__item_4 cmt-features-grid__item">
+      {% if item.image_field.src %}
+      {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+      {% if item.image_field.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% elif item.image_field.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+      {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+      <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+
+      <h5 class="cmt-title cmt-features-grid__items__title">
+        {{ item.card_heading }}
+      </h5>
+      <div class="cmt-features-grid__items__text">
+        {{ item.card_description }}
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>

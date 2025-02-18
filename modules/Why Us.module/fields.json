@@ -1,0 +1,122 @@
+[ {
+  "id" : "6f123e84-47a5-fb74-3a50-662f89bcd8a0",
+  "name" : "section_heading",
+  "label" : "Section Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Why Us"
+}, {
+  "id" : "e3941ea4-4361-c19e-bb46-e3c22c4352e1",
+  "name" : "section_description",
+  "label" : "Section Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p><span>We support these professional services businesses and their clients with residential and commercial lending.</span></p>"
+}, {
+  "id" : "e74bc736-c46f-f5f8-d112-1e0382e6d705",
+  "name" : "card",
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "896a84bb-5e00-f92f-f252-3d946c06a5cc",
+    "name" : "image_field",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/people.svg",
+      "alt" : "people",
+      "loading" : "lazy",
+      "width" : 85,
+      "height" : 77,
+      "max_width" : 85,
+      "max_height" : 77
+    }
+  }, {
+    "id" : "815a0cb1-cb00-2503-bfc9-e3313e1841d2",
+    "name" : "card_heading",
+    "label" : "Card Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Connect"
+  }, {
+    "id" : "61d3272a-f6e2-5a8f-63cf-89648673988f",
+    "name" : "card_description",
+    "label" : "Card Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p><span>We begin with a multi-layered approach to fulfilling your financial needs, introducing you to others in our network where necessary.</span></p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/people.svg",
+      "alt" : "people",
+      "loading" : "lazy",
+      "width" : 85,
+      "height" : 77,
+      "max_width" : 85,
+      "max_height" : 77
+    },
+    "card_heading" : "Connect",
+    "card_description" : "<p><span>We begin with a multi-layered approach to fulfilling your financial needs, introducing you to others in our network where necessary.</span></p>"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/people.svg",
+      "alt" : "people",
+      "loading" : "lazy",
+      "width" : 85,
+      "height" : 77,
+      "max_width" : 85,
+      "max_height" : 77
+    },
+    "card_heading" : "Connect",
+    "card_description" : "<p><span>We begin with a multi-layered approach to fulfilling your financial needs, introducing you to others in our network where necessary.</span></p>"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/people.svg",
+      "alt" : "people",
+      "loading" : "lazy",
+      "width" : 85,
+      "height" : 77,
+      "max_width" : 85,
+      "max_height" : 77
+    },
+    "card_heading" : "Connect",
+    "card_description" : "<p><span>We begin with a multi-layered approach to fulfilling your financial needs, introducing you to others in our network where necessary.</span></p>"
+  } ]
+} ]

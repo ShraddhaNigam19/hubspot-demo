@@ -1,0 +1,30 @@
+.cmt-latest-posts {
+  background-color: #f1f2f2;
+}
+
+.cmt-wrapper.blog-index__heading {
+  padding: 100px 100px 20px 100px;
+}
+.cmt-latest-posts__container.cmt-wrapper.blog-index-wrapper {
+  padding: 0 100px 100px 100px;
+}
+h2.blog-index__post-title {
+  margin-bottom: 10px;
+}
+.blog-index__post-summary p {
+  margin-bottom: 0px;
+}
+@media (max-width: 1024px) {
+  .cmt-wrapper.blog-index__heading {
+    padding: 50px 20px;
+    padding-bottom: 0px !important;
+  }
+  .blog-related-posts__list{
+      flex-direction: column;
+  }
+  .cmt-latest-posts__container.cmt-wrapper.blog-index-wrapper {
+    padding: 0 20px;
+    padding-bottom: 50px !important;
+  }
+
+}

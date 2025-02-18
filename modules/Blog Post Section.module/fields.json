@@ -1,0 +1,128 @@
+[ {
+  "id" : "0e4c85f4-9440-120e-a765-7c1d0bfa5e0b",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Latest News"
+}, {
+  "id" : "e82c6e3f-7f71-1bee-db42-3bce97f1bd95",
+  "name" : "blog_card",
+  "label" : "Blog Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "80418ad3-7fa7-1801-e3cd-9d4c721695ee",
+    "name" : "image_field",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/Business%20Advice%20tile.webp",
+      "alt" : "Business Advice tile",
+      "loading" : "lazy",
+      "width" : 580,
+      "height" : 334,
+      "max_width" : 580,
+      "max_height" : 334
+    }
+  }, {
+    "id" : "fb49a60b-f8fc-3034-8a0b-8fd28390ef9f",
+    "name" : "date",
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "22 March 2023"
+  }, {
+    "id" : "bd6fda02-25b3-9918-e496-cb2dd8b72a3a",
+    "name" : "blog_title",
+    "label" : "Blog title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Project Name 3"
+  }, {
+    "id" : "a107801f-d7c1-a65b-f239-2b63f17621e7",
+    "name" : "blog_description",
+    "label" : "Blog Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Phasellus laoreet lorem vel dolor tempus vehicula. Donec sed odio operae, eu vulputate felis...</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/Business%20Advice%20tile.webp",
+      "alt" : "Business Advice tile",
+      "loading" : "lazy",
+      "width" : 580,
+      "height" : 334,
+      "max_width" : 580,
+      "max_height" : 334
+    },
+    "date" : "22 March 2023",
+    "blog_title" : "Project Name 3",
+    "blog_description" : "<p>Phasellus laoreet lorem vel dolor tempus vehicula. Donec sed odio operae, eu vulputate felis...</p>"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/Business%20Advice%20tile.webp",
+      "alt" : "Business Advice tile",
+      "loading" : "lazy",
+      "width" : 580,
+      "height" : 334,
+      "max_width" : 580,
+      "max_height" : 334
+    },
+    "date" : "22 March 2023",
+    "blog_title" : "Project Name 3",
+    "blog_description" : "<p>Phasellus laoreet lorem vel dolor tempus vehicula. Donec sed odio operae, eu vulputate felis...</p>"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/Business%20Advice%20tile.webp",
+      "alt" : "Business Advice tile",
+      "loading" : "lazy",
+      "width" : 580,
+      "height" : 334,
+      "max_width" : 580,
+      "max_height" : 334
+    },
+    "date" : "22 March 2023",
+    "blog_title" : "Project Name 3",
+    "blog_description" : "<p>Phasellus laoreet lorem vel dolor tempus vehicula. Donec sed odio operae, eu vulputate felis...</p>"
+  } ]
+} ]

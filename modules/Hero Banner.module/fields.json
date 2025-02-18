@@ -1,0 +1,89 @@
+[ {
+  "id" : "8cc685b1-a061-22dd-415e-91daf9d9684d",
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto_custom_max",
+    "src" : "https://241967506.fs1.hubspotusercontent-na2.net/hubfs/241967506/hero-banner-img.webp",
+    "alt" : "hero-banner-img",
+    "loading" : "lazy",
+    "width" : 2880,
+    "height" : 1382,
+    "max_width" : 2000,
+    "max_height" : 959.7222222222223
+  }
+}, {
+  "id" : "7a76ccef-6558-7002-5fb2-23c3c0c318cf",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Here to connect you with business and financial strategies"
+}, {
+  "id" : "60e66ae1-3932-a1c8-3712-0c337b9d23bd",
+  "name" : "button",
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b6bf5b1-e215-1530-91a9-b6a0a53a052e",
+    "name" : "text_field",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Contact Us"
+  }, {
+    "id" : "2ac248b7-72b9-f667-3b21-1c57c5ade55c",
+    "name" : "link_field",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text_field" : "Contact Us",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]
